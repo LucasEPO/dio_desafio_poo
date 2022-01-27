@@ -1,13 +1,32 @@
-Expression licensePrefix is undefined on line 4, column 3 in Templates/Licenses/license-default.txt.To change this license header, choose License Headers in Project Properties.
-Expression licensePrefix is undefined on line 5, column 3 in Templates/Licenses/license-default.txt.To change this template file, choose Tools | Templates
-Expression licensePrefix is undefined on line 6, column 3 in Templates/Licenses/license-default.txt.and open the template in the editor.
-
 package desafio_poo;
+
+import java.time.LocalDate;
 
 /**
  *
- * @author lucas
+ * @author LucasEPO
  */
-public class Mentoria {
+public class Mentoria extends Conteudo {
 
+    private LocalDate data;
+
+    public LocalDate getData() {
+        return data;
+    }
+
+    public void setData(LocalDate data) {
+        this.data = data;
+    }
+
+
+    @Override
+    public double calcularXp() {
+        return XP_PADRAO + 20d;
+    }
+    
+    @Override
+    public String toString() {
+        return "Mentoria{" + "titulo=" + getTitulo() + ", descricao=" + getDescricao() + ", data=" + data + '}';
+    }
+    
 }
